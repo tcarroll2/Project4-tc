@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -674,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Project4" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Project4_tc" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -683,7 +683,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="Project4" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="Project4_tc" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -700,7 +700,7 @@
                                         <rect key="frame" x="0.0" y="14" width="75" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="rLu-sF-Vye">
-                                            <font key="font" metaFont="titleBar"/>
+                                            <font key="font" metaFont="system"/>
                                             <segments>
                                                 <segment image="NSGoLeftTemplate" width="32"/>
                                                 <segment image="NSGoRightTemplate" width="32" tag="1"/>
@@ -717,7 +717,7 @@
                                         <rect key="frame" x="0.0" y="14" width="75" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="CKG-lG-WD7">
-                                            <font key="font" metaFont="titleBar"/>
+                                            <font key="font" metaFont="system"/>
                                             <segments>
                                                 <segment image="NSAddTemplate" width="32"/>
                                                 <segment image="NSRemoveTemplate" width="32" tag="1"/>
@@ -734,7 +734,7 @@
                                         <rect key="frame" x="0.0" y="14" width="75" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="njo-cl-ZAm">
-                                            <font key="font" metaFont="titleBar"/>
+                                            <font key="font" metaFont="system"/>
                                             <segments>
                                                 <segment image="NSAddTemplate" width="32"/>
                                                 <segment image="NSRemoveTemplate" width="32" tag="1"/>
@@ -757,6 +757,9 @@
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <connections>
+                                            <action selector="urlEntered:" target="Oky-zY-oP4" id="MaL-X1-6aa"/>
+                                        </connections>
                                     </textField>
                                     <connections>
                                         <action selector="urlEntered:" target="Oky-zY-oP4" id="4as-mT-TYt"/>
@@ -800,11 +803,11 @@
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
-                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="kxi-0t-4GX"/>
                         </connections>
                     </window>
                     <connections>
-                        <outlet property="addressEntry" destination="17Y-MC-tnF" id="6Cx-2e-eE4"/>
+                        <outlet property="addressEntry" destination="qAt-89-2Gd" id="Sf5-e8-iwS"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
                 </windowController>
@@ -815,7 +818,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Project4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Project4_tc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
